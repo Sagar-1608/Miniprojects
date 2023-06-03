@@ -4,6 +4,13 @@
 const boxes= document.querySelectorAll(".box");
 const gameinfo = document.querySelector(".game-info");
 const newgameBtn = document.querySelector(".btn"); 
+let p1=prompt("Enter Player-1 Name", "X");
+let p2=prompt("Enter Player-2 Name", "O");
+const name1= document.querySelector(".name1");
+const name2= document.querySelector(".name2");
+
+
+
 
 let currentPlayer;
 let gameGrid;
@@ -23,8 +30,13 @@ const winposition=[
 // function for initialise the game 
 
 function initGame(){
-    currentPlayer="X";  // default value for current player
+
+    name1.innerText = p1;
+    name2.innerText = p2;
+    
+    currentPlayer = p1 ;  // default value for current player
     gameGrid=["","","","","","","","",""]; //grid is empty 
+  
 
     //update on ui (innitialy it is empty )
     boxes.forEach((box,index)=>{
@@ -50,22 +62,20 @@ function initGame(){
 }
 
 // function call 
-initGame();
 
-
-
+ initGame();
 
 
 // swap turn function 
 function swapTurn()
 {
-    if(currentPlayer=='X')
+    if(currentPlayer===p1)
     {
-        currentPlayer="O";
+        currentPlayer=p2;
     }
     else
     {
-        currentPlayer="X";
+        currentPlayer=p1;
     }
 
     // here we update the game info (heading that say which turn is going )
@@ -84,11 +94,11 @@ function gameOver()
         && (gameGrid[position[0]]===gameGrid[position[1]]) &&(gameGrid[position[1]]===gameGrid[position[2]]))
         {
             // check who is winner 
-            if(gameGrid[position[0]]==="X")
+            if(gameGrid[position[0]]===p1)
             {
-                answer="X";
+                answer=p1;
             }
-           else answer="O";
+           else answer=p2;
 
            //disable pointer when winner found 
 
