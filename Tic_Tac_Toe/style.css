@@ -82,7 +82,7 @@
     text-align: center;
     cursor: pointer;
 
-    /* display: none; */
+    display: none;
 }
 
 .btn.active
