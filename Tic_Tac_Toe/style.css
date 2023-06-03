@@ -7,7 +7,7 @@
 .wrapper{
     width: 100vw;
     height: 100vh;
-    background-image: url(./Usign-Gradients-Featured-Image.webp);
+    background-image: url(./backimage.avif);
     background-size: cover;
     background-position: center;
     display: grid;
@@ -18,7 +18,7 @@
 .game-info{
     color: white;
     position: absolute;
-    top: 3rem;
+    top: 1.5rem;
     left: 50%;
     transform: translate(-50%);
     background-color: rgba(255, 255, 255, 0.15);
@@ -28,6 +28,41 @@
     text-align: center;
 
 }
+
+.player1{
+
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 2rem;
+    text-align: center; 
+
+ 
+}
+
+.player2{
+    position: absolute;
+    bottom: 14%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 2rem;
+    text-align: center; 
+    display: flex;
+    justify-content: stretch;
+    
+}
+
+
+
 
 .tic-tac-toe{
     width: 90%;
@@ -47,7 +82,7 @@
     width: 100%;
     aspect-ratio: 1/1;
     cursor: pointer;
-    font-size: 3rem;
+    font-size: 2rem;
     color: white;
     display: flex;
     justify-content: center;
@@ -72,7 +107,7 @@
 .btn{
     color: white;
     position: absolute;
-    bottom: 3rem;
+    bottom: 1.5rem;
     left: 50%;
     transform: translate(-50%);
     background-color: rgba(255, 255, 255, 0.15);
